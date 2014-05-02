@@ -4,6 +4,9 @@
 
 @import "bootstrap";
 
+/* mixings, variables etc. */
+$greyMediumLight: #eaeaea;
+
 /* universal */
 
 html {
@@ -25,11 +28,12 @@ textarea {
 .center {
 	text-align: center;
 	height: 300px;
+	h1 {
+		margin-bottom: 10px;
+	}
 }
 
-.center h1{
-	margin-bottom: 10px;
-}
+
 
 /* typography */
 
@@ -69,12 +73,12 @@ p {
 	padding-top: 9px;
 	font-weight: bold;
 	line-height: 1em;
+	&:hover {
+		color: white;
+		text-decoration: none;
+	}
 }
 
-#logo:hover {
-	color: #fff;
-	text-decoration: none;
-}
 
 /* footer */
 
@@ -82,36 +86,25 @@ footer{
 	margin-top: 45px;
 	padding-top:5px;
 	border-top: 1px solid #eaeaea;
+	a {
+		color: $gray;
+		&:hover {
+			color: $grayDarker;
+		}
+	}
+
+	small {
+		float: left;
+	}
+	ul {
+		float: right;
+		list-style: none;
+		li {
+			float: left;
+			margin-left: 10px;
+		}
+	}
 }
-
-footer a{
-	color: #555;
-}
-
-footer a:hover{
-	color: #222;
-}
-
-footer small{
-	float: left;
-}
-
-footer ul{
-	float: right;
-	list-style: none;
-}
-
-footer ul li{
-	float: left;
-	margin-left: 10px;
-}
-
-
-
-
-
-
-
 
 
 
