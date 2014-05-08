@@ -6,7 +6,8 @@ SampleApp::Application.routes.draw do
 
   # you can have the root of your site routed with root
   # root 'welcome#index'
-  get "users/new"
+  resources :users
+  # get "users/new" (no need to add after adding resources :users)
 
 
   root 'static_pages#home'
