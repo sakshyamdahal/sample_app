@@ -8,6 +8,7 @@ SampleApp::Application.routes.draw do
   # root 'welcome#index'
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :microposts, only: [:create, :destroy]
   # get "users/new" (no need to add after adding resources :users)
 
 
