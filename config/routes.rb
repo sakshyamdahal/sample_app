@@ -6,9 +6,14 @@ SampleApp::Application.routes.draw do
 
   # you can have the root of your site routed with root
   # root 'welcome#index'
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
   # get "users/new" (no need to add after adding resources :users)
 
 
